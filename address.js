@@ -1,29 +1,36 @@
-const newObj = {};
-function get(){
-	fetch('https://dog.ceo/api/breeds/list')
-	.then( response => response.json())
-	.then( data => {
-		// newObj.push({
-		// 	'name':data.results["0"].name.first, 'picture':data.results["0"].picture.large
-		// })
-		// conseol.log(newObj)
-		newArr.push(data);
-		console.log(newArr)
-		for(let index = 0; index < newaArr.length; index++){
-		const secondName = newArr[i].results["0"].name.first;
-		
-		// console.log("First name: ", newArray["0"].results["0"].name.first)
-firstName.innerHTML = `
-		user name: ${secondName}
-		`
-		}
-	});
-
-	.catch( err => console.log("we have an error",err))
-	.finally( ()=> stopTheWheel())
+alert('hello');
+const userArray =[];
+const eachUser = document.querySelector(".eachUser")
+class user {
+	constructor(name, image){
+		this.name = name
+		this.image = image
+	}
 }
+const newArr = [];
+ function get(){
+	fetch('https://randomuser.me/api/')
+ 	.then(response => response.json())
+ 	.then(data => {
+		 data.results.forEach(function(element){
+			 let name  = element.name.first;
+			 let image = element.picture.large;
+			 userArray.push(new user(name, image));
+		 });
+	});
+		const createDom = (name, picture) => {
+			getElementById('name')name.innerHTML = `
+			user name: ${secondName}
+			<img src=${picture}
+			`
+		}
+		
+	
+		
+		
+		 
+	.catch( error => console.log("we have an error:", error))
+ 	.finally( ()=> console.log("you suck"))
+  };
 
-console.log("entire new array", newArray);
-console.log("just the name", newArray[0]);
-
-
+ }	
