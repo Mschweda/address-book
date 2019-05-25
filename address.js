@@ -1,6 +1,3 @@
-// alert('hello');
-// 
-// 
 let userId = 0;
 (function(){
 	const userArray =[];
@@ -43,8 +40,8 @@ class user {
 	  
 const createDom = (firstName, lastName, image, phone, email, dob, age) => {
 	allUsers.innerHTML += `
-	<div class='eachUser' id='eachuser'>
-	<div>
+	<div class='eachUser' id='eachUser'>
+		<div>
 		${firstName} ${lastName}
 		<br>
 		<img src='${image}'/>
