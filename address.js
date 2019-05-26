@@ -17,7 +17,7 @@ class user {
 }
 
  
-	fetch('https://randomuser.me/api/?results=50')
+	fetch('https://randomuser.me/api/?results=52')
  	.then(response => response.json())
  	.then(data => {
 		 data.results.forEach(function(element){
@@ -26,7 +26,7 @@ class user {
 			 let image = element.picture.large;
 			 let phone = element.phone;
 			 let email = element.email;
-			 let dob = element.dob.age;
+			 let dob = element.dob.date;
 			 let age = element.dob.age
 			 userArray.push(new user(firstName, lastName, image, phone, email, dob, age));
 			 createDom(firstName, lastName, image, phone, email, dob, age);
@@ -60,6 +60,12 @@ const createDom = (firstName, lastName, image, phone, email, dob, age) => {
 	`
 }
 }) ()
+
+const displayInfo =(userId) => {
+	let otherInfo = document.querySelector('#otherInfo'+userId);
+	otherInfo.style.display = 'block';
+	otherInfo.style.color ='red';
+}
 
 
 

@@ -1,0 +1,22 @@
+.user {
+    margin: auto;
+    text-align: center;
+}
+
+.eachUser {
+    padding: 15px;
+    border: 4px solid red;
+    width: 260px;
+    height: auto;
+    margin: 0 auto;
+    display: inline-block;
+}
+
+h1 {
+    text-align: center;
+    color: blue;
+}
+
+body {
+    background-color: aqua;
+}
